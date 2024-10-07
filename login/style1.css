@@ -1,0 +1,130 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/img/fotologin.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  width: 420px;
+  background: rgb(241, 237, 237);
+  border: 2px solid #397541;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  margin-top: 100px;
+  padding: 100px 40px;
+  align-items: center;
+}
+
+.wrapper h5 {
+  font-size: 14px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper .a1 {
+  text-decoration: underline;
+}
+
+.wrapper span {
+  color: rgb(43, 90, 4);
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  color: rgba(10, 73, 1);
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  margin: 0rem 0;
+  padding: 1.5rem;
+  width: 89%;
+  height: 15%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 3px solid #397541;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(11, 12, 11);
+}
+
+.input-box input::placeholder {
+  color: rgb(10, 73, 1);
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-33%);
+  font-size: 20px;
+  color: rgb(25, 66, 20);
+}
+
+.input-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .btn {
+  width: 40%;
+  height: 45px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  margin: auto;
+}
+
+.btn:hover {
+  font-size: 18px;
+  transform: translateY(-5px);
+  transition: 0.5s;
+  color: white;
+  background-color: rgb(10, 73, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .register-link {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: #397541;
+  text-decoration: none;
+}
+
+.register-link p a:hover {
+  color: #397541;
+  border-bottom: 0.1rem solid #397541;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.a {
+  text-decoration: underline;
+}
