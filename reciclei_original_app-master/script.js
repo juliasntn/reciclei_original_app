@@ -41,7 +41,8 @@ const themeToggle = document.getElementById('theme-toggle');
         }
     });
     
-    const menuToggle = document.getElementById('menu-toggle');
+
+const menuToggle = document.getElementById('menu-toggle');
 const navbar = document.querySelector('.navbar');
 const navbarLinks = document.querySelectorAll('.navbar a');
 
