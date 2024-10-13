@@ -23,11 +23,11 @@ const themeToggle = document.getElementById('theme-toggle');
 
     const zoomInBtn = document.getElementById('zoomIn');
     const zoomOutBtn = document.getElementById('zoomOut');
-    let fontSize = 15; 
+    let fontSize = 10; 
 
    
     zoomInBtn.addEventListener('click', () => {
-        if (fontSize < 17) { 
+        if (fontSize < 20) { 
             fontSize += 1;
             document.documentElement.style.fontSize = fontSize + 'px';
         }
@@ -35,8 +35,24 @@ const themeToggle = document.getElementById('theme-toggle');
 
     
     zoomOutBtn.addEventListener('click', () => {
-        if (fontSize > 12) { 
+        if (fontSize > 8) { 
             fontSize -= 1;
             document.documentElement.style.fontSize = fontSize + 'px';
         }
     });
+    
+    const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.querySelector('.navbar');
+const navbarLinks = document.querySelectorAll('.navbar a');
+
+
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
+
+
+navbarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+    });
+});
