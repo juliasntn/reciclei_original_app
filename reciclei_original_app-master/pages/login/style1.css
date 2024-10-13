@@ -148,10 +148,6 @@ body {
   text-decoration: underline;
 }
 
-.wrapper span {
-  color: rgb(43, 90, 4);
-}
-
 .wrapper h1 {
   font-size: 36px;
   text-align: center;
@@ -196,6 +192,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 5px;
+  display: flex;
+  margin-top: -10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
 .wrapper .btn {

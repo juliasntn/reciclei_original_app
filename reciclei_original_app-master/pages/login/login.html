@@ -46,14 +46,16 @@
         <form action="">
             <h1>LOGIN</h1>
             <div class="input-box">
-                <input type="text" placeholder="Login" required maxlength="6" />
+                <input type="text" id="login" placeholder="Login"/>
                 <i class='bx bxs-log-in'></i>
             </div>
+            <span class="error-message" id="login-error"></span>
 
             <div class="input-box">
-                <input type="password" placeholder="Senha" required />
+                <input type="password" id="password" placeholder="Senha"/>
                 <i class='bx bxs-lock-alt'></i>
             </div>
+            <span class="error-message" id="password-error"></span> 
 
             <div class="input-btn">
                 <button type="submit" class="btn">Logar</button>
@@ -70,6 +72,7 @@
         </form>
     </div>
     <script src="/pages/login/scriptl.js"></script>
+    <script src="/pages/login/validacao.js"></script>
 </body>
 
 </html>
