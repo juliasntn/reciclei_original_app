@@ -190,54 +190,6 @@ section{
     }
 }
 
-/* Seção home responsiva */
-@media (max-width: 768px) {
-    .home-container {
-        height: 70vh;
-    }
-
-    .content h3 {
-        font-size: 3.5rem;
-    }
-
-    .btn {
-        font-size: 1.4rem;
-        padding: 0.8rem 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .content h3 {
-        font-size: 2.5rem;
-    }
-
-    .btn {
-        font-size: 1.2rem;
-        padding: 0.6rem 2rem;
-    }
-}
-
-/* Seção sobre nós responsiva */
-@media (max-width: 768px) {
-    .about .row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about .row .content {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .about .row .content h3 {
-        font-size: 2rem;
-    }
-
-    .about .row .content p {
-        font-size: 1.4rem;
-    }
-}
 
 /* Seção menu responsiva */
 @media (max-width: 768px) {
