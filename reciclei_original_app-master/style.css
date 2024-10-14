@@ -17,7 +17,6 @@
     --border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 
-
 :root.dark-theme {
     --main-color: #d3ad7f;
     --footer-bg-color: #d3ad7f;
@@ -43,10 +42,9 @@
 
 body {
     background-color: var(--bg);
-
 }
 
-section{
+section {
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
@@ -62,7 +60,6 @@ section{
     background-color: var(--bg);
 }
 
-
 .header section {
     display: flex;
     align-items: center;
@@ -71,11 +68,16 @@ section{
     padding-bottom: 1.5rem;   
 }
 
+.navbar {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
 .navbar a {
     margin: 0 1rem;
     font-size: 1.9rem;
     color: #fff;
-
 }
 
 .icons {
@@ -103,16 +105,13 @@ section{
     border-bottom: 0.1rem solid var(--main-color);
     padding: 0.5rem;
     font-size: 1.8rem;
-
 }
-
 
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 0.1rem solid var(--main-color);
     padding: 0.5rem;
     font-size: 1.8rem;
-
 }
 
 .btn {
@@ -127,7 +126,6 @@ section{
 
 .btn:hover {
     letter-spacing: 0.1rem;
-
 }
 
 .home-container {
@@ -135,23 +133,20 @@ section{
     height: 100vh;
     background-position: center;
     background-size: cover;
-}
-
-.home-container section {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: auto;
-    min-height: 70vh;
+    text-align: left;
 }
 
 .content {
     max-width: 60rem;
-
 }
 
 .content h3 {
-    color: #1b5f35;
+    color: #08632b;
     font-size: 6rem;
+    
 }
 
 .content-2 {
@@ -170,7 +165,6 @@ section{
     padding: 1rem 0;
 }
 
-
 .title {
     font-size: 3rem;
     color: var(--main-color);
@@ -179,11 +173,11 @@ section{
     margin-bottom: 4rem;
 }
 
-.title span{
+.title span {
     color: #fff;
     text-transform: uppercase;
-
 }
+
 .about .row {
     display: flex;
     align-items: center;
@@ -193,7 +187,6 @@ section{
 
 .about .row .content {
     padding: 2rem;
-
 }
 
 .about .row .content h3 {
@@ -206,7 +199,6 @@ section{
     color: #fff;
     padding: 1rem 0;
     line-height: 1.8;
-
 }
 
 .box-container {
@@ -224,7 +216,6 @@ section{
 
 .menu .box-container .box:hover {
     background-color: #fff;
-
 }
 
 .menu .box-container .box img {
@@ -241,101 +232,6 @@ section{
     color: var(--black);
 }
 
-
-
-@media (max-width: 768px) {
-    .header section {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    .navbar a {
-        margin: 0.5rem 0; 
-        font-size: 1.6rem; 
-    }
-
-    .icons {
-        margin: 1rem 0; 
-    }
-
-    .home-container {
-        background: url("./img/homepag2.png");
-        height: 100vh;
-        background-position: center;
-        background-size: auto;
-    }
-
-    .home-container section {
-        padding: 2rem; 
-    }
-
-    .content h3 {
-        font-size: 4rem; 
-    }
-
-    .content p {
-        font-size: 1.5rem; 
-    }
-
-    .about .row {
-        flex-direction: column; 
-    }
-
-    .about .row .container-image {
-        margin-bottom: 2rem; 
-    }
-
-    .menu .box-container {
-        grid-template-columns: 1fr; 
-    }
-
-    .menu .box-container .box {
-        padding: 3rem; 
-    }
-
-    .footer {
-        text-align: center; 
-    }
-}
-
-
-@media (max-width: 480px) {
-    .header section {
-        padding: 1rem; 
-    }
-
-    .navbar a {
-        font-size: 1.4rem; 
-    }
-
-.home-container {
-        background: url("./img/homepag2.png");
-        height: 100vh;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .btn {
-        font-size: 1.5rem; 
-    }
-
-    .content h3 {
-        font-size: 3rem; 
-    }
-
-    .content p {
-        font-size: 1.3rem; 
-    }
-
-    .about .row .content h3 {
-        font-size: 2.5rem; 
-    }
-
-    .about .row .content p {
-        font-size: 1.4rem; 
-    }
-}
-
 img {
     max-width: 100%;
     height: auto; 
@@ -346,7 +242,6 @@ img {
     padding: 2rem 0;
     color: #ffffff;
 }
-
 
 .contact-info p {
     margin: 0.5rem 0;
@@ -373,93 +268,110 @@ img {
     background-color: var(--black);
 }
 
-.navbar {
-    display: flex;
-    gap: 1.5rem;
-}
+/* Responsividade */
 
+/* Navbar para telas menores */
 .menu-toggle {
     display: none;
-    font-size: 2.8rem;
+    font-size: 3rem;
     cursor: pointer;
-    color: var(--text-color);
 }
 
 @media (max-width: 768px) {
     .navbar {
-        display: none;  
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 50%;
-        background-color: var(--bg);
-        padding: 1rem;
-        z-index: 99;
-    }
-
-    .navbar.active {
-        display: flex;  
-    }
-
-    .navbar a {
-        padding: 1px;
-        font-size: 1.8rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        display: none;
     }
 
     .menu-toggle {
         display: block;
     }
-}
 
-@media (max-width: 1024px) {
-    .header section {
+    .menu-toggle.active + .navbar {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--black);
+        padding: 1rem;
     }
 
     .navbar a {
-        font-size: 1.5rem;
-        padding: 0.5rem 0; 
+        font-size: 1.8rem;
+        padding: 1rem;
+        color: var(--text-color);
     }
+}
 
+/* Seção home responsiva */
+@media (max-width: 768px) {
     .home-container {
-        background-size: contain;
-        height: auto;
+        height: 70vh;
     }
 
     .content h3 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
-    .menu .box-container {
-        grid-template-columns: 1fr;
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2.5rem;
     }
 }
 
-@media (max-width: 768px) {
-    .header section {
-        padding: 0.5rem; 
-    }
-
-    .navbar a {
-        font-size: 1.4rem;
-        padding: 0.3rem 0; 
-    }
-
+@media (max-width: 480px) {
     .content h3 {
         font-size: 2.5rem;
     }
 
-    .menu .box-container {
-        grid-template-columns: 1fr;
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.6rem 2rem;
     }
 }
-.header section {
-    padding: 1rem;
+
+/* Seção sobre nós responsiva */
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .row .content {
+        padding: 1rem;
+    }
 }
-.navbar a {
-    padding: 0.5rem 0;
+
+@media (max-width: 480px) {
+    .about .row .content h3 {
+        font-size: 2rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Seção menu responsiva */
+@media (max-width: 768px) {
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu .box-container .box {
+        padding: 3rem;
+    }
+}
+
+/* Footer responsivo */
+@media (max-width: 768px) {
+    .contact-info p {
+        font-size: 1.4rem;
+    }
+
+    .share img {
+        width: 25px;
+        height: 25px;
+    }
 }
