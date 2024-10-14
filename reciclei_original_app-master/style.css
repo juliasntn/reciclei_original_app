@@ -145,7 +145,8 @@ section {
 
 .content h3 {
     color: #08632b;
-    font-size: 6rem;
+    font-size: 4rem;
+    margin-left: -500px;
     
 }
 
@@ -311,7 +312,10 @@ img {
     }
 
     .content h3 {
-        font-size: 3.5rem;
+        color: #08632b;
+        font-size: 13px !important;
+        margin-left: -120px;
+        
     }
 
     .btn {
