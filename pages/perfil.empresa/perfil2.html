@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/cadastro.empresa/style2.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <title>Perfil da Empresa - Reciclei</title>
+</head>
+<body>
+    <header class="header">
+        <section>
+            <a href="#" class="logo">
+                <img src="/img/logo1.png" alt="logo">
+            </a>
+            <nav class="navbar">
+                <a href="/index.html#home">Home</a>
+                <a href="/index.html#about">Sobre</a>
+                <a href="/index.html#menu">Menu</a>
+                <a href="/index.html#review">Mapa</a>
+                <a href="/index.html#address">Endereço</a>
+            </nav>
+            <div class="icons">
+                <i class='bx bx-moon' id="theme-toggle"></i>
+            </div>
+            <div class="icons">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="zoom-controls">
+                <button id="zoomIn">A+</button>
+                <button id="zoomOut">A-</button>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </section>
+    </header>
+
+    <div class="profile-wrapper">
+        <section class="profile-header">
+            <h1>Perfil da Empresa</h1>
+            <p>Visualize as informações cadastradas da sua empresa abaixo:</p>
+        </section>
+
+        <section class="profile-content">
+            <div class="profile-item">
+                <i class='bx bxs-user'></i>
+                <h3>Nome da Empresa</h3>
+                <p id="display-name">Nome Completo da Empresa</p>
+            </div>
+
+            <div class="profile-item">
+                <i class='bx bx-id-card'></i>
+                <h3>CNPJ</h3>
+                <p id="display-cnpj">CNPJ da Empresa</p>
+            </div>
+
+            <div class="profile-item">
+                <i class='bx bxs-envelope'></i>
+                <h3>Email</h3>
+                <p id="display-email">Email da Empresa</p>
+            </div>
+
+            <div class="profile-item">
+                <i class='bx bxs-phone'></i>
+                <h3>Telefone Fixo</h3>
+                <p id="display-tel-fix">Telefone Fixo da Empresa</p>
+            </div>
+
+            <div class="profile-item">
+                <i class='bx bxs-phone-call'></i>
+                <h3>Celular</h3>
+                <p id="display-cell">Celular da Empresa</p>
+            </div>
+
+            <div class="profile-item">
+                <i class='bx bx-globe'></i>
+                <h3>Endereço Completo</h3>
+                <p id="display-address">Endereço Completo da Empresa</p>
+            </div>
+
+            <div class="profile-item">
+                <i class='bx bxs-log-in'></i>
+                <h3>Login</h3>
+                <p id="display-login">Login da Empresa</p>
+            </div>
+        </section>
+
+        <div class="profile-actions">
+            <button onclick="editProfile()" class="btn">Editar Perfil</button>
+            <button onclick="logout()" class="btn">Sair</button>
+        </div>
+    </div>
+
+    <script src="/pages/perfil.empresa/perfil2.js"></script>
+</body>
+</html>
+
