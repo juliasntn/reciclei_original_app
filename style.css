@@ -15,7 +15,7 @@
     --bg: #1b5f35;
     --text-color: #000;
     --border: 0.1rem solid rgba(0, 0, 0, 0.3);
-    --spanmap: rgb(204, 255, 0);
+    --spanmap: #f8a948;
 }
 
 :root.dark-theme {
@@ -25,7 +25,7 @@
     --bg: #062b1c;
     --text-color: rgb(0, 0, 0);
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    --spanmap: rgb(54, 250, 0);
+    --spanmap: #fabb6f;
 }
 
 #theme-toggle {
@@ -154,6 +154,10 @@ section {
 
 .spanmap {
     color:var(--spanmap);
+}
+
+.spanseta {
+    font-size: 22px;
 }
 
 .content-2 {
