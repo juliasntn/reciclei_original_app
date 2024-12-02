@@ -1,120 +1,3 @@
-// Defina as perguntas do quiz
-const questions = [
-    {
-        question: "O que é reciclável?",
-        options: ["Plástico", "Lixo orgânico", "Papel", "Todos os anteriores"],
-        correctAnswer: "Todos os anteriores"
-    },
-    {
-        question: "Como a reciclagem ajuda o meio ambiente?",
-        options: ["Reduzindo a poluição", "Aumentando o lixo", "Desmatando florestas", "Nenhuma das alternativas"],
-        correctAnswer: "Reduzindo a poluição"
-    },
-    {
-        question: "Qual é o principal material reciclável utilizado em garrafas?",
-        options: ["Vidro", "Plástico", "Papel", "Metal"],
-        correctAnswer: "Plástico"
-    },
-    {
-        question: "O que é compostagem?",
-        options: ["Transformação de resíduos orgânicos em fertilizante", "Transformação de lixo eletrônico", "Reciclagem de garrafas plásticas", "Nenhuma das alternativas"],
-        correctAnswer: "Transformação de resíduos orgânicos em fertilizante"
-    },
-    {
-        question: "Como podemos reduzir o uso de plástico no nosso dia a dia?",
-        options: ["Usando sacolas plásticas", "Comprando produtos embalados em plástico", "Usando sacolas reutilizáveis", "Comprando produtos em embalagens descartáveis"],
-        correctAnswer: "Usando sacolas reutilizáveis"
-    },
-    {
-        question: "O que acontece com os materiais recicláveis que não são reciclados?",
-        options: ["Vão para aterros sanitários", "São reutilizados em outros produtos", "São transformados em energia", "Nenhuma das alternativas"],
-        correctAnswer: "Vão para aterros sanitários"
-    },
-    {
-        question: "Qual é a vida útil de uma garrafa de plástico no meio ambiente?",
-        options: ["5 anos", "100 anos", "500 anos", "Indefinidamente"],
-        correctAnswer: "500 anos"
-    },
-    {
-        question: "Qual material pode ser reciclado infinitamente sem perder qualidade?",
-        options: ["Plástico", "Vidro", "Papel", "Metal"],
-        correctAnswer: "Vidro"
-    },
-    {
-        question: "Qual destes materiais não pode ser reciclado?",
-        options: ["Plástico", "Vidro", "Madeira", "Papel"],
-        correctAnswer: "Madeira"
-    },
-    {
-        question: "O que é a coleta seletiva?",
-        options: ["Mistura de lixo orgânico e reciclável", "Separação dos materiais recicláveis", "Coleta de lixo comum", "Reciclagem de metais"],
-        correctAnswer: "Separação dos materiais recicláveis"
-    }
-];
-
-// Variáveis do quiz
-let currentQuestionIndex = 0;
-let score = 0;
-
-// Exibe a pergunta atual
-function displayQuestion() {
-    const questionElement = document.getElementById('quiz');
-    const currentQuestion = questions[currentQuestionIndex];
-    
-    questionElement.innerHTML = `
-        <div class="question">${currentQuestion.question}</div>
-        <div class="options">
-            ${currentQuestion.options.map(option => `
-                <label>
-                    <input type="radio" name="answer" value="${option}"> ${option}
-                </label>
-            `).join('<br>')}
-        </div>
-    `;
-}
-
-// Exibe os resultados
-function showResults() {
-    const resultsElement = document.getElementById('results');
-    resultsElement.innerHTML = `Você acertou ${score} de ${questions.length} perguntas.`;
-    document.getElementById('restart').style.display = 'inline-block'; // Exibe o botão de recomeçar
-}
-
-// Processa a resposta e move para a próxima pergunta
-function nextQuestion() {
-    const selectedOption = document.querySelector('input[name="answer"]:checked');
-    if (!selectedOption) return;
-
-    const currentQuestion = questions[currentQuestionIndex];
-    if (selectedOption.value === currentQuestion.correctAnswer) {
-        score++;
-    }
-
-    currentQuestionIndex++;
-
-    if (currentQuestionIndex < questions.length) {
-        displayQuestion();
-    } else {
-        showResults();
-    }
-}
-
-// Reinicia o quiz
-function restartQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    displayQuestion();
-    document.getElementById('results').innerHTML = '';
-    document.getElementById('restart').style.display = 'none'; // Esconde o botão de recomeçar
-}
-
-// Inicializa o quiz
-document.getElementById('submit').addEventListener('click', nextQuestion);
-document.getElementById('restart').addEventListener('click', restartQuiz);
-
-// Exibe a primeira pergunta ao carregar a página
-displayQuestion();
-
 const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'dark';
 
@@ -173,4 +56,60 @@ navbarLinks.forEach(link => {
         navbar.classList.remove('active');
     });
 });
+
+const correctAnswers = {
+    Q1: "Amarela",
+    Q2: "Vidro",
+    Q3: "Papel",
+    Q4: "Espuma",
+    Q5: "Amarela",
+    Q6: "Marrom",
+    Q7: "Separar materiais recicláveis",
+    Q8: "Pontos de coleta específicos",
+    Q9: "Separação de resíduos recicláveis e orgânicos",
+    Q10: "Reduz a poluição e o desperdício",
+  };
+  
+  const form = document.getElementById("quiz-form");
+  const resultsDiv = document.getElementById("results");
+  const restartBtn = document.getElementById("restart-btn");
+  const submitBtn = document.getElementById("submit-btn");
+  
+  // Botão para enviar o quiz
+  submitBtn.addEventListener("click", () => {
+    let results = "";
+    let score = 0;
+    let totalQuestions = Object.keys(correctAnswers).length;
+  
+    Object.keys(correctAnswers).forEach((question) => {
+      const userAnswer = form[question]?.value || "Não respondido";
+      const correctAnswer = correctAnswers[question];
+      if (userAnswer === correctAnswer) {
+        results += `<p>${question}: Certo! Resposta: ${correctAnswer}</p>`;
+        score++;
+      } else {
+        results += `<p>${question}: Errado! Resposta correta: ${correctAnswer} (Você respondeu: ${userAnswer})</p>`;
+      }
+    });
+  
+    results += `<h3>Sua pontuação: ${score}/${totalQuestions}</h3>`;
+    resultsDiv.innerHTML = results;
+  
+    // Exibe o botão de reiniciar e esconde o botão de enviar
+    restartBtn.style.display = "block";
+    submitBtn.style.display = "none";
+  });
+  
+  // Botão para reiniciar o quiz
+  restartBtn.addEventListener("click", () => {
+    // Reseta as respostas do formulário
+    form.reset();
+  
+    // Limpa os resultados
+    resultsDiv.innerHTML = "";
+  
+    // Reexibe o botão de enviar e esconde o de reiniciar
+    restartBtn.style.display = "none";
+    submitBtn.style.display = "block";
+  });
 
