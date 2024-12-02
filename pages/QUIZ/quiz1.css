@@ -128,14 +128,20 @@ h1 {
     color: #d3ad7f;
     margin-bottom: 20px;
 }
+
 p {
-  color: #d3ad7f;
+  color: #141413;
   
 }
 
 h2 {
   color: #2c7b44;
   margin-bottom: 15px;
+}
+
+h4 {
+  color: #d3ad7f;
+  margin-bottom: 20px;
 }
 
 
@@ -209,6 +215,5 @@ button:hover {
 
 #restart:hover {
   background-color: #2f855a;
+
 }
-
-
