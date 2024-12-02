@@ -39,15 +39,74 @@
             </nav>
         </section>
     </header>
-        <div class="quiz-container">
+    <div class="quiz-container">
             <h2>Quiz de Reciclagem</h2>
-            <div id="quiz">
-                <!-- O conteúdo do quiz será inserido aqui dinamicamente -->
-            </div>
-            <button id="submit">Ver Resultados</button>
+            <form id="quiz-form">
+              <div class="question">
+                <p>1. Qual cor de lixeira é usada para plásticos?</p>
+                <label><input type="radio" name="Q1" value="Azul"> Azul</label>
+                <label><input type="radio" name="Q1" value="Vermelha"> Vermelha</label>
+                <label><input type="radio" name="Q1" value="Amarela"> Amarela</label>
+              </div>
+              <div class="question">
+                <p>2. Qual material é reciclado na lixeira verde?</p>
+                <label><input type="radio" name="Q2" value="Papel"> Papel</label>
+                <label><input type="radio" name="Q2" value="Vidro"> Vidro</label>
+                <label><input type="radio" name="Q2" value="Metal"> Metal</label>
+              </div>
+              <div class="question">
+                <p>3. O que deve ser descartado na lixeira azul?</p>
+                <label><input type="radio" name="Q3" value="Plástico"> Plástico</label>
+                <label><input type="radio" name="Q3" value="Metal"> Metal</label>
+                <label><input type="radio" name="Q3" value="Papel"> Papel</label>
+              </div>
+              <div class="question">
+                <p>4. Qual destes materiais não é reciclável?</p>
+                <label><input type="radio" name="Q4" value="Papelão"> Papelão</label>
+                <label><input type="radio" name="Q4" value="Espuma"> Espuma</label>
+                <label><input type="radio" name="Q4" value="Vidro"> Vidro</label>
+              </div>
+              <div class="question">
+                <p>5. Qual cor de lixeira é destinada a metais?</p>
+                <label><input type="radio" name="Q5" value="Vermelha"> Vermelha</label>
+                <label><input type="radio" name="Q5" value="Amarela"> Amarela</label>
+                <label><input type="radio" name="Q5" value="Preta"> Preta</label>
+              </div>
+              <div class="question">
+                <p>6. Resíduos orgânicos devem ser descartados em qual lixeira?</p>
+                <label><input type="radio" name="Q6" value="Marrom"> Marrom</label>
+                <label><input type="radio" name="Q6" value="Verde"> Verde</label>
+                <label><input type="radio" name="Q6" value="Preta"> Preta</label>
+              </div>
+              <div class="question">
+                <p>7. Qual destas atitudes contribui para a reciclagem?</p>
+                <label><input type="radio" name="Q1" value="Misturar materiais recicláveis e orgânicos"> Misturar materiais recicláveis e orgânicos</label>
+                <label><input type="radio" name="Q7" value="Separar materiais recicláveis"> Separar materiais recicláveis</label>
+                <label><input type="radio" name="Q7" value="Jogar tudo no lixo comum"> Jogar tudo no lixo comum</label>
+              </div>
+              <div class="question">
+                <p>8. Pilhas e baterias devem ser descartadas em:</p>
+                <label><input type="radio" name="Q8" value="Lixo comum"> Lixo comum</label>
+                <label><input type="radio" name="Q8" value="Pontos de coleta específicos"> Pontos de coleta específicos</label>
+                <label><input type="radio" name="Q8" value="Lixeira azul"> Lixeira azul</label>
+              </div>
+              <div class="question">
+                <p>9. O que é coleta seletiva?</p>
+                <label><input type="radio" name="Q9" value="Separação de resíduos recicláveis e orgânicos"> Separação de resíduos recicláveis e orgânicos</label>
+                <label><input type="radio" name="Q9" value="Jogar tudo no mesmo lixo"> Jogar tudo no mesmo lixo</label>
+                <label><input type="radio" name="Q9" value="Coleta de resíduos industriais"> Coleta de resíduos industriais</label>
+              </div>
+              <div class="question">
+                <p>10. Por que a reciclagem é importante?</p>
+                <label><input type="radio" name="Q10" value="Reduz a poluição e o desperdício"> Reduz a poluição e o desperdício</label>
+                <label><input type="radio" name="Q10" value="Aumenta o lixo acumulado"> Aumenta o lixo acumulado</label>
+                <label><input type="radio" name="Q10" value="Não faz diferença"> Não faz diferença</label>
+              </div>
+              <button type="button" id="submit-btn">Enviar</button>
+            </form>
             <div id="results"></div>
-            <button id="restart" style="display: none;">Recomeçar Quiz</button>
-        </div>
+            <button id="restart-btn" style="display: none;">Reiniciar</button>
+          </div>
        
             <div class="tips-container">
                 <h2>Dicas de Reciclagem</h2>
@@ -74,7 +133,7 @@
         <!-- Jogo Online -->
         <div class="game-link">
             <h1>Divirta-se Aprendendo!</h1>
-            <p>Quer aprender mais sobre reciclagem de forma divertida? Experimente jogar o jogo abaixo:</p>
+            <h4>Quer aprender mais sobre reciclagem de forma divertida? Experimente jogar o jogo abaixo:</h4>
             
             <!-- Jogo em iframe -->
             <iframe style="max-width:100%" src="https://wordwall.net/embed/c57e3da1ffb54f47bb7fcf9596de72f0?themeId=41&templateId=3&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe>
