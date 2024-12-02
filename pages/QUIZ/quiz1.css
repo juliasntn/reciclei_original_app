@@ -99,6 +99,19 @@
     border-color: var(--main-color);
     transition: 0.3s;
   }
+  .login1 {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    display: flex;
+}
+
+.login1:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding: 0.5rem;
+    font-size: 1.8rem;
+} 
 
 
 
@@ -217,3 +230,51 @@ button:hover {
   background-color: #2f855a;
 
 }
+/* Navbar para telas menores */
+.menu-toggle {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .menu-toggle.active + .navbar {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--black);
+      padding: 1rem;
+  }
+
+  .navbar a {
+      font-size: 1.8rem;
+      padding: 1rem;
+      color: var(--text-color);
+  }
+}
+
+
+/* Seção menu responsiva */
+@media (max-width: 768px) {
+  .box-container {
+      grid-template-columns: 1fr;
+  }
+
+  .menu .box-container .box {
+      padding: 3rem;
+  }
+}
+
+
+
